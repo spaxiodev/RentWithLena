@@ -1,0 +1,15 @@
+# Rent With Lena: allow all crawlers full access
+User-agent: *
+Allow: /
+
+# AI / answer-engine crawlers (welcome, boosts discovery)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://staywithlena.com/sitemap.xml
