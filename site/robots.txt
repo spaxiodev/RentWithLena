@@ -12,4 +12,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://staywithlena.com/sitemap.xml
+Sitemap: https://rentwithlena.com/sitemap.xml
