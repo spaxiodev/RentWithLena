@@ -4,13 +4,17 @@
 (function () {
   'use strict';
 
-  var ZILLOW = 'https://www.zillow.com/homedetails/1345-SW-14th-Ave-Miami-FL-33145/43853602_zpid/?utm_campaign=zillowwebmessage&utm_medium=referral&utm_source=txtshare';
-
-  /* Wire every booking link/button to Zillow (open in new tab) */
+  /* Zillow access is temporarily off. Disable every booking link/button and
+     swap its label for a "coming back soon" notice. Restore the URL below and
+     this loop to the previous wiring to re-enable. */
   Array.prototype.forEach.call(document.querySelectorAll('[data-zillow]'), function (el) {
-    el.setAttribute('href', ZILLOW);
-    el.setAttribute('target', '_blank');
-    el.setAttribute('rel', 'noopener');
+    el.removeAttribute('href');
+    el.removeAttribute('target');
+    el.removeAttribute('rel');
+    el.setAttribute('aria-disabled', 'true');
+    el.classList.add('is-disabled');
+    el.textContent = 'Zillow listing coming back soon';
+    el.addEventListener('click', function (e) { e.preventDefault(); });
   });
 
   /* Current year */

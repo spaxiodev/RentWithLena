@@ -112,6 +112,15 @@ h1,h2,h3,h4{margin:0;font-weight:400}
 .btn-book.lg{font-size:1rem;padding:.72em 1.4em;min-height:44px}
 .btn-book.xl{font-size:1.02rem;padding:.8em 1.6em;min-height:48px}
 
+/* Zillow temporarily unavailable - "coming back soon" notice (non-clickable) */
+.is-disabled{
+  cursor:default;pointer-events:none;opacity:.7;
+  font-style:italic;letter-spacing:0;white-space:normal;text-align:center;
+}
+.btn-book.is-disabled,.btn-book.is-disabled:hover,.btn-book.is-disabled:active{
+  background:var(--surface-light);transform:none;
+}
+
 /* secondary: ghost - elevated surface + hairline border */
 .btn-ghost{
   display:inline-flex;align-items:center;justify-content:center;gap:.4em;
